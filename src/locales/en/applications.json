@@ -1,0 +1,85 @@
+{
+  "title": "Creator applications",
+  "subtitle": "Approve or reject requests to become a Creator. Oldest first.",
+  "filter": {
+    "label": "Filter by status",
+    "PENDING": "Pending",
+    "APPROVED": "Approved",
+    "REJECTED": "Rejected",
+    "CANCELLED": "Cancelled",
+    "ALL": "All"
+  },
+  "status": {
+    "PENDING": "Pending",
+    "APPROVED": "Approved",
+    "REJECTED": "Rejected",
+    "CANCELLED": "Cancelled"
+  },
+  "table": {
+    "caption": "Creator applications, oldest first. Use the arrow keys to move and Enter to open details.",
+    "username": "Username",
+    "legalName": "Legal name",
+    "age": "Age",
+    "emailVerified": "Email",
+    "submittedAt": "Submitted",
+    "status": "Status",
+    "rowLabel": "Application from {{username}}, {{status}}",
+    "loadMore": "Load more",
+    "end": "All applications are shown.",
+    "empty": "No applications.",
+    "emptyPending": "No applications waiting for review.",
+    "loadError": "Could not load the applications."
+  },
+  "age_one": "{{count}} year old",
+  "age_other": "{{count}} years old",
+  "verified": "Verified",
+  "unverified": "Not verified",
+  "detail": {
+    "label": "Application details",
+    "close": "Close details",
+    "placeholder": "Select an application to see its details.",
+    "notFound": "This application was not found.",
+    "loadError": "Could not load the application.",
+    "account": "Account",
+    "application": "Application",
+    "username": "Username",
+    "displayName": "Display name",
+    "email": "Email",
+    "accountCreatedAt": "Account created",
+    "legalName": "Legal name",
+    "birthDate": "Date of birth",
+    "birthDateWithAge": "{{date}} ({{age}})",
+    "note": "Note",
+    "noNote": "No note",
+    "status": "Status",
+    "submittedAt": "Submitted",
+    "reviewedAt": "Reviewed",
+    "rejectReason": "Rejection reason",
+    "ownApplication": "This is your own application. Another administrator must review it.",
+    "decided": "This application has been decided and cannot change."
+  },
+  "approve": {
+    "action": "Approve",
+    "title": "Approve {{username}}'s application?",
+    "body": "{{username}} becomes a Creator and a channel is created automatically with handle = username. This cannot be undone.",
+    "confirm": "Approve application",
+    "success": "Approved {{username}}'s application."
+  },
+  "reject": {
+    "action": "Reject",
+    "title": "Reject {{username}}'s application?",
+    "body": "The applicant sees this reason and can submit a new application.",
+    "reasonLabel": "Rejection reason",
+    "reasonHint": "10 to 500 characters.",
+    "counter": "{{length}}/{{max}}",
+    "tooShort": "The reason needs at least 10 characters.",
+    "tooLong": "The reason can be at most 500 characters.",
+    "confirm": "Reject application",
+    "success": "Rejected {{username}}'s application."
+  },
+  "errors": {
+    "alreadyDecided": "Application already processed",
+    "selfReview": "You cannot approve or reject your own application.",
+    "notFound": "This application no longer exists."
+  }
+}

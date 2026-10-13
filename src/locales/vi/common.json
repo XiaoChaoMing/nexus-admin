@@ -1,0 +1,61 @@
+{
+  "brand": "NexusLive",
+  "brandAdmin": "Admin",
+  "loading": "Đang tải",
+  "nav": {
+    "main": "Điều hướng quản trị",
+    "skipToContent": "Bỏ qua tới nội dung",
+    "creatorApplications": "Đơn Creator",
+    "reports": "Báo cáo",
+    "users": "Người dùng",
+    "channels": "Kênh",
+    "streams": "Stream",
+    "auditLog": "Nhật ký",
+    "comingSoon": "Có ở GĐ5",
+    "phase5": "GĐ5"
+  },
+  "topBar": {
+    "signedInAs": "Đang đăng nhập: {{name}}",
+    "logout": "Đăng xuất",
+    "role": "Quản trị viên"
+  },
+  "actions": {
+    "cancel": "Hủy",
+    "retry": "Thử lại",
+    "close": "Đóng",
+    "backHome": "Về trang chính"
+  },
+  "language": {
+    "label": "Ngôn ngữ",
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "errors": {
+    "VALIDATION_FAILED": "Thông tin chưa hợp lệ, vui lòng kiểm tra lại.",
+    "UNAUTHORIZED": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.",
+    "SESSION_EXPIRED": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.",
+    "FORBIDDEN": "Bạn không có quyền thực hiện thao tác này.",
+    "NOT_FOUND": "Không tìm thấy dữ liệu.",
+    "CONFLICT": "Dữ liệu đã thay đổi. Vui lòng tải lại.",
+    "INVALID_STATE": "Trạng thái đã thay đổi. Vui lòng tải lại.",
+    "PAYLOAD_TOO_LARGE": "Dữ liệu gửi lên quá lớn.",
+    "RATE_LIMITED": "Bạn thao tác quá nhanh. Vui lòng thử lại sau.",
+    "RATE_LIMITED_wait": "Bạn thao tác quá nhanh. Thử lại sau {{seconds}} giây.",
+    "ACCOUNT_LOCKED": "Tài khoản đang bị khóa. Liên hệ quản trị hệ thống nếu đây là nhầm lẫn.",
+    "ACCOUNT_LOCKED_until": "Tài khoản tạm khóa do đăng nhập sai nhiều lần. Thử lại sau {{time}}.",
+    "SERVICE_UNAVAILABLE": "Hệ thống đang bận hoặc bảo trì. Vui lòng thử lại sau ít phút.",
+    "INTERNAL_ERROR": "Đã có lỗi xảy ra phía máy chủ. Vui lòng thử lại.",
+    "NETWORK_ERROR": "Không kết nối được máy chủ. Kiểm tra mạng rồi thử lại.",
+    "fallback": "Có lỗi xảy ra, vui lòng thử lại."
+  },
+  "boot": {
+    "errorTitle": "Không khôi phục được phiên đăng nhập",
+    "errorBody": "Máy chủ chưa phản hồi. Bạn có thể thử lại hoặc đăng nhập lại.",
+    "toLogin": "Đăng nhập lại"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Không tìm thấy trang",
+    "body": "Đường dẫn này không tồn tại trong trang quản trị."
+  }
+}

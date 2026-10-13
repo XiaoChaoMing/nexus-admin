@@ -1,0 +1,84 @@
+{
+  "title": "Đơn đăng ký Creator",
+  "subtitle": "Duyệt hoặc từ chối đơn trở thành Creator. Đơn cũ nhất hiện trước.",
+  "filter": {
+    "label": "Lọc theo trạng thái",
+    "PENDING": "Chờ duyệt",
+    "APPROVED": "Đã duyệt",
+    "REJECTED": "Đã từ chối",
+    "CANCELLED": "Đã hủy",
+    "ALL": "Tất cả"
+  },
+  "status": {
+    "PENDING": "Chờ duyệt",
+    "APPROVED": "Đã duyệt",
+    "REJECTED": "Đã từ chối",
+    "CANCELLED": "Đã hủy"
+  },
+  "table": {
+    "caption": "Danh sách đơn Creator, cũ nhất trước. Dùng phím mũi tên để di chuyển, Enter để mở chi tiết.",
+    "username": "Tên người dùng",
+    "legalName": "Họ tên pháp lý",
+    "age": "Tuổi",
+    "emailVerified": "Email",
+    "submittedAt": "Ngày nộp",
+    "status": "Trạng thái",
+    "rowLabel": "Đơn của {{username}}, {{status}}",
+    "loadMore": "Tải thêm",
+    "end": "Đã hiện tất cả đơn.",
+    "empty": "Không có đơn nào.",
+    "emptyPending": "Không còn đơn nào chờ duyệt.",
+    "loadError": "Không tải được danh sách đơn."
+  },
+  "age_other": "{{count}} tuổi",
+  "verified": "Đã xác minh",
+  "unverified": "Chưa xác minh",
+  "detail": {
+    "label": "Chi tiết đơn",
+    "close": "Đóng chi tiết",
+    "placeholder": "Chọn một đơn trong danh sách để xem chi tiết.",
+    "notFound": "Không tìm thấy đơn này.",
+    "loadError": "Không tải được chi tiết đơn.",
+    "account": "Tài khoản",
+    "application": "Đơn đăng ký",
+    "username": "Tên người dùng",
+    "displayName": "Tên hiển thị",
+    "email": "Email",
+    "accountCreatedAt": "Ngày tạo tài khoản",
+    "legalName": "Họ tên pháp lý",
+    "birthDate": "Ngày sinh",
+    "birthDateWithAge": "{{date}} ({{age}})",
+    "note": "Ghi chú",
+    "noNote": "Không có ghi chú",
+    "status": "Trạng thái",
+    "submittedAt": "Ngày nộp",
+    "reviewedAt": "Ngày xử lý",
+    "rejectReason": "Lý do từ chối",
+    "ownApplication": "Đây là đơn của chính bạn. Một quản trị viên khác phải xử lý đơn này.",
+    "decided": "Đơn đã được xử lý, không thể đổi quyết định."
+  },
+  "approve": {
+    "action": "Duyệt",
+    "title": "Duyệt đơn của {{username}}?",
+    "body": "{{username}} sẽ trở thành Creator và kênh được tạo tự động với handle = tên người dùng. Không thể hoàn tác.",
+    "confirm": "Duyệt đơn",
+    "success": "Đã duyệt đơn của {{username}}."
+  },
+  "reject": {
+    "action": "Từ chối",
+    "title": "Từ chối đơn của {{username}}?",
+    "body": "Người nộp sẽ thấy lý do này và có thể nộp lại đơn mới.",
+    "reasonLabel": "Lý do từ chối",
+    "reasonHint": "Từ 10 đến 500 ký tự.",
+    "counter": "{{length}}/{{max}}",
+    "tooShort": "Lý do cần ít nhất 10 ký tự.",
+    "tooLong": "Lý do tối đa 500 ký tự.",
+    "confirm": "Từ chối đơn",
+    "success": "Đã từ chối đơn của {{username}}."
+  },
+  "errors": {
+    "alreadyDecided": "Đơn đã được xử lý",
+    "selfReview": "Bạn không thể tự duyệt hoặc từ chối đơn của chính mình.",
+    "notFound": "Đơn không còn tồn tại."
+  }
+}

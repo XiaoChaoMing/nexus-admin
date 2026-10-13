@@ -1,0 +1,61 @@
+{
+  "brand": "NexusLive",
+  "brandAdmin": "Admin",
+  "loading": "Loading",
+  "nav": {
+    "main": "Admin navigation",
+    "skipToContent": "Skip to content",
+    "creatorApplications": "Creator applications",
+    "reports": "Reports",
+    "users": "Users",
+    "channels": "Channels",
+    "streams": "Streams",
+    "auditLog": "Audit log",
+    "comingSoon": "Coming in phase 5",
+    "phase5": "P5"
+  },
+  "topBar": {
+    "signedInAs": "Signed in as {{name}}",
+    "logout": "Sign out",
+    "role": "Administrator"
+  },
+  "actions": {
+    "cancel": "Cancel",
+    "retry": "Retry",
+    "close": "Close",
+    "backHome": "Back to start"
+  },
+  "language": {
+    "label": "Language",
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "errors": {
+    "VALIDATION_FAILED": "Some information is invalid, please check it.",
+    "UNAUTHORIZED": "Your session has expired. Please sign in again.",
+    "SESSION_EXPIRED": "Your session has expired. Please sign in again.",
+    "FORBIDDEN": "You do not have permission to do this.",
+    "NOT_FOUND": "Not found.",
+    "CONFLICT": "The data has changed. Please reload.",
+    "INVALID_STATE": "The status has changed. Please reload.",
+    "PAYLOAD_TOO_LARGE": "The request is too large.",
+    "RATE_LIMITED": "Too many requests. Please try again later.",
+    "RATE_LIMITED_wait": "Too many requests. Try again in {{seconds}} seconds.",
+    "ACCOUNT_LOCKED": "This account is locked. Contact the system administrator if this is a mistake.",
+    "ACCOUNT_LOCKED_until": "Account temporarily locked after too many failed sign-ins. Try again after {{time}}.",
+    "SERVICE_UNAVAILABLE": "The service is busy or under maintenance. Please try again in a few minutes.",
+    "INTERNAL_ERROR": "Something went wrong on the server. Please try again.",
+    "NETWORK_ERROR": "Cannot reach the server. Check your connection and try again.",
+    "fallback": "Something went wrong, please try again."
+  },
+  "boot": {
+    "errorTitle": "Could not restore your session",
+    "errorBody": "The server did not respond. Retry, or sign in again.",
+    "toLogin": "Sign in again"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "body": "This address does not exist in the admin console."
+  }
+}
