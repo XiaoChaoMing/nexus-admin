@@ -1,0 +1,59 @@
+{
+  "title": "Channels",
+  "subtitle": "Look up by @handle, channel name or ID; suspend / restore channels. Refreshes every 30 seconds.",
+  "search": {
+    "label": "Find a channel",
+    "placeholder": "Enter a @handle, channel name or ID",
+    "submit": "Search"
+  },
+  "filter": {
+    "label": "Filter channels",
+    "status": "Status",
+    "all": "All"
+  },
+  "status": {
+    "ACTIVE": "Active",
+    "SUSPENDED": "Suspended"
+  },
+  "table": {
+    "caption": "Channels by handle. Use the arrow keys to move and Enter to open the details.",
+    "channel": "Channel",
+    "owner": "Owner",
+    "status": "Status",
+    "openReports": "Open reports",
+    "rowLabel": "{{name}} (@{{handle}})",
+    "notFound": "No channel found",
+    "empty": "No channels yet.",
+    "loadError": "Could not load the channels.",
+    "end": "All shown."
+  },
+  "detail": {
+    "label": "Channel details",
+    "placeholder": "Pick a channel in the list to see its details.",
+    "notFound": "This channel was not found.",
+    "loadError": "Could not load the channel.",
+    "live": "Live",
+    "channel": "Channel",
+    "owner": "Owner",
+    "openReports": "Open reports",
+    "suspendedAt": "Suspended at",
+    "currentStream": "Current stream",
+    "watch": "Open watch page",
+    "openProfile": "Open channel profile",
+    "history": "History"
+  },
+  "suspend": {
+    "action": "Suspend channel",
+    "title": "Suspend the channel {{name}}?",
+    "body": "A running broadcast ends right away, chat becomes read-only, the channel disappears from Browse and Search and upcoming schedules are cancelled. Suspensions have no end date.",
+    "confirm": "Suspend channel",
+    "success": "Suspended {{name}}"
+  },
+  "restore": {
+    "action": "Restore channel",
+    "title": "Restore the channel {{name}}?",
+    "body": "The channel shows up in Browse and Search again and the creator can go live.",
+    "confirm": "Restore channel",
+    "success": "Restored {{name}}"
+  }
+}

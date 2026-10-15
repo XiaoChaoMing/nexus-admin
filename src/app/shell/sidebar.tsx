@@ -3,45 +3,52 @@ import { NavLink } from 'react-router'
 import { Badge } from '@/components/ui/badge'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
+import { useOpenReportCount } from '@/features/reports/hooks/use-reports'
 import { Brand } from './brand'
 import { NAV_ITEMS, type NavItem } from './nav-items'
 
 const itemClass =
-  'flex h-10 items-center gap-3 rounded-control px-3 text-label-md text-muted-foreground transition-colors max-xl:justify-center max-xl:px-0'
+  'relative flex h-10 items-center gap-3 rounded-control px-3 text-label-md text-muted-foreground transition-colors max-xl:justify-center max-xl:px-0'
 
-function SidebarItem({ item }: { item: NavItem }) {
+/** "99+" keeps the badge narrow. */
+function countLabel(count: number) {
+  return count > 99 ? '99+' : String(count)
+}
+
+function SidebarItem({ item, openReports }: { item: NavItem; openReports: number }) {
   const { t } = useTranslation()
   const Icon = item.icon
   const label = t(item.label)
-
-  const content = item.disabled ? (
-    // Not a link yet: focusable so keyboard users still get the tooltip, announced as disabled.
-    <span role="link" aria-disabled="true" tabIndex={0} aria-label={`${label} (${t('nav.comingSoon')})`} className={cn(itemClass, 'cursor-not-allowed opacity-60')}>
-      <Icon className="size-5 shrink-0" aria-hidden />
-      <span className="flex-1 truncate max-xl:hidden">{label}</span>
-      <Badge variant="secondary" className="max-xl:hidden" aria-hidden>
-        {t('nav.phase5')}
-      </Badge>
-    </span>
-  ) : (
-    <NavLink
-      to={item.to}
-      aria-label={label}
-      className={cn(
-        itemClass,
-        'hover:bg-accent hover:text-foreground',
-        'aria-[current=page]:bg-card aria-[current=page]:text-foreground aria-[current=page]:[&_svg]:text-primary',
-      )}
-    >
-      <Icon className="size-5 shrink-0" aria-hidden />
-      <span className="truncate max-xl:hidden">{label}</span>
-    </NavLink>
-  )
+  const count = item.openReportsBadge ? openReports : 0
+  const accessibleName = count ? `${label} (${t('nav.openReports', { count })})` : label
 
   return (
     <Tooltip>
-      <TooltipTrigger asChild>{content}</TooltipTrigger>
-      <TooltipContent side="right">{item.disabled ? `${label} · ${t('nav.comingSoon')}` : label}</TooltipContent>
+      <TooltipTrigger asChild>
+        <NavLink
+          to={item.to}
+          aria-label={accessibleName}
+          className={cn(
+            itemClass,
+            'hover:bg-accent hover:text-foreground',
+            'aria-[current=page]:bg-card aria-[current=page]:text-foreground aria-[current=page]:[&_svg]:text-primary',
+          )}
+        >
+          <Icon className="size-5 shrink-0" aria-hidden />
+          <span className="flex-1 truncate max-xl:hidden">{label}</span>
+          {count > 0 && (
+            <Badge
+              variant="warning"
+              aria-hidden
+              data-testid="open-reports-badge"
+              className="tabular-nums max-xl:absolute max-xl:-top-1 max-xl:-right-1 max-xl:px-1 max-xl:py-0 max-xl:text-[10px]"
+            >
+              {countLabel(count)}
+            </Badge>
+          )}
+        </NavLink>
+      </TooltipTrigger>
+      <TooltipContent side="right">{accessibleName}</TooltipContent>
     </Tooltip>
   )
 }
@@ -49,6 +56,7 @@ function SidebarItem({ item }: { item: NavItem }) {
 /** Fixed left rail: 240px on desktop (≥1280), icons only on tablet. */
 export function Sidebar() {
   const { t } = useTranslation()
+  const { data } = useOpenReportCount()
 
   return (
     <aside className="fixed inset-y-0 left-0 z-30 flex w-16 flex-col border-r bg-surface xl:w-60">
@@ -58,7 +66,7 @@ export function Sidebar() {
       </div>
       <nav aria-label={t('nav.main')} className="flex flex-col gap-1 p-3">
         {NAV_ITEMS.map((item) => (
-          <SidebarItem key={item.to} item={item} />
+          <SidebarItem key={item.to} item={item} openReports={data?.open ?? 0} />
         ))}
       </nav>
     </aside>

@@ -11,8 +11,8 @@
     "channels": "Channels",
     "streams": "Streams",
     "auditLog": "Audit log",
-    "comingSoon": "Coming in phase 5",
-    "phase5": "P5"
+    "openReports_one": "{{count}} new report",
+    "openReports_other": "{{count}} new reports"
   },
   "topBar": {
     "signedInAs": "Signed in as {{name}}",
@@ -57,5 +57,44 @@
     "code": "404",
     "title": "Page not found",
     "body": "This address does not exist in the admin console."
+  },
+  "detail": {
+    "close": "Close details"
+  },
+  "table": {
+    "loadMore": "Load more"
+  },
+  "applying": "Applying…",
+  "reason": {
+    "label": "Reason",
+    "hint": "10 to 500 characters.",
+    "counter": "{{length}}/{{max}}",
+    "tooShort": "The reason needs at least 10 characters.",
+    "tooLong": "The reason can be at most 500 characters.",
+    "length": "The reason must be 10 to 500 characters."
+  },
+  "adminErrors": {
+    "self": "You cannot do this to yourself.",
+    "adminTarget": "Administrator accounts cannot be locked.",
+    "protected": "A channel owner cannot be restricted in their own channel's chat.",
+    "notFound": "The target no longer exists.",
+    "alreadyBanned": "This person is already banned from the chat of this channel.",
+    "reportGone": "The report no longer exists."
+  },
+  "duration": {
+    "lockLegend": "Lock duration",
+    "lock": {
+      "24": "24 hours",
+      "168": "7 days",
+      "720": "30 days",
+      "forever": "Permanent"
+    },
+    "timeoutLegend": "Timeout length",
+    "timeout": {
+      "60": "1 minute",
+      "600": "10 minutes",
+      "3600": "1 hour",
+      "86400": "1 day"
+    }
   }
 }

@@ -71,8 +71,9 @@ export async function toApiError(res: Response): Promise<ApiError> {
 
 async function parse<T>(res: Response): Promise<T> {
   if (!res.ok) throw await toApiError(res)
-  if (res.status === 204 || res.status === 202) return undefined as T
+  if (res.status === 204) return undefined as T
 
+  // 202 from safety-svc carries `{data: {actionId}}`; an empty 202 still resolves (to undefined).
   const payload: unknown = await res.json().catch(() => null)
   return (payload as { data: T } | null)?.data as T
 }

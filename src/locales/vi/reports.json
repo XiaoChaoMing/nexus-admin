@@ -1,0 +1,150 @@
+{
+  "title": "Báo cáo vi phạm",
+  "subtitle": "Báo cáo cũ nhất hiện trước. Danh sách tự làm mới mỗi 30 giây.",
+  "tab": {
+    "TODO": "Cần xử lý",
+    "RESOLVED": "Đã xử lý",
+    "DISMISSED": "Đã bỏ qua",
+    "ALL": "Tất cả"
+  },
+  "status": {
+    "OPEN": "Mới",
+    "IN_REVIEW": "Đang xử lý",
+    "RESOLVED": "Đã xử lý",
+    "DISMISSED": "Đã bỏ qua"
+  },
+  "targetType": {
+    "MESSAGE": "Tin nhắn",
+    "USER": "Người dùng",
+    "STREAM": "Buổi phát",
+    "CHANNEL": "Kênh"
+  },
+  "reason": {
+    "SPAM": "Spam",
+    "HARASSMENT": "Quấy rối",
+    "VIOLENCE": "Bạo lực",
+    "SENSITIVE": "Nội dung nhạy cảm",
+    "COPYRIGHT": "Bản quyền",
+    "OTHER": "Khác"
+  },
+  "filter": {
+    "label": "Lọc báo cáo",
+    "statusLabel": "Lọc theo trạng thái",
+    "targetType": "Đối tượng",
+    "reason": "Lý do",
+    "all": "Tất cả",
+    "clear": "Xóa bộ lọc"
+  },
+  "table": {
+    "caption": "Danh sách báo cáo, cũ nhất trước. Dùng phím mũi tên để di chuyển, Enter để mở chi tiết.",
+    "target": "Đối tượng",
+    "reason": "Lý do",
+    "reporter": "Người báo cáo",
+    "sameTarget": "Cùng đối tượng",
+    "status": "Trạng thái",
+    "assignee": "Người xử lý",
+    "createdAt": "Thời điểm",
+    "rowLabel": "Báo cáo về {{target}}, {{status}}",
+    "emptyTodo": "Không còn báo cáo nào cần xử lý.",
+    "emptyFiltered": "Không có báo cáo phù hợp.",
+    "empty": "Không có báo cáo nào.",
+    "loadError": "Không tải được danh sách báo cáo.",
+    "end": "Đã hiện tất cả."
+  },
+  "detail": {
+    "label": "Chi tiết báo cáo",
+    "placeholder": "Chọn một báo cáo trong danh sách để xem chi tiết.",
+    "notFound": "Không tìm thấy báo cáo này.",
+    "loadError": "Không tải được chi tiết báo cáo.",
+    "reportedAt": "Báo cáo lúc {{time}}",
+    "report": "Báo cáo",
+    "reason": "Lý do",
+    "note": "Ghi chú",
+    "noNote": "Không có ghi chú",
+    "reporter": "Người báo cáo",
+    "target": "Đối tượng",
+    "targetType": "Loại",
+    "targetLabel": "Nội dung",
+    "evidence": "Bằng chứng",
+    "history": "Lịch sử trên đối tượng",
+    "related_other": "Báo cáo khác cùng đối tượng ({{count}})"
+  },
+  "target": {
+    "openWatch": "Mở trang xem",
+    "openProfile": "Mở hồ sơ",
+    "viewUser": "Xem người dùng",
+    "viewOwner": "Xem chủ kênh"
+  },
+  "evidence": {
+    "notForTarget": "Báo cáo buổi phát và kênh không kèm tin nhắn chat.",
+    "unavailableTitle": "Không lấy được tin nhắn",
+    "unavailableBody": "Hệ thống chat không phản hồi khi tạo báo cáo.",
+    "none": "Không có tin nhắn đính kèm.",
+    "listLabel_other": "{{count}} tin nhắn làm bằng chứng",
+    "reported": "Tin bị báo cáo",
+    "deleted": "Đã xóa"
+  },
+  "history": {
+    "empty": "Chưa có hành động nào.",
+    "by": "bởi @{{username}}",
+    "lockFor": "Khóa {{duration}}",
+    "lockUntil": "Khóa tới {{time}}",
+    "type": {
+      "LOCK_USER": "Khóa tài khoản",
+      "UNLOCK_USER": "Mở khóa tài khoản",
+      "SUSPEND_CHANNEL": "Tạm ngưng kênh",
+      "RESTORE_CHANNEL": "Mở lại kênh",
+      "TAKEDOWN_STREAM": "Gỡ buổi phát"
+    }
+  },
+  "claim": {
+    "action": "Nhận xử lý",
+    "reclaim": "Nhận lại",
+    "mine": "Bạn đang xử lý",
+    "byOther": "Đang xử lý bởi @{{username}}",
+    "success": "Đã nhận xử lý báo cáo",
+    "resolvedBy": "Đã xử lý bởi @{{username}} lúc {{time}}",
+    "dismissedBy": "Đã bỏ qua bởi @{{username}} lúc {{time}}"
+  },
+  "resolve": {
+    "action": "Xử lý",
+    "title": "Xử lý báo cáo",
+    "body": "Đối tượng: {{target}}. Chọn hành động rồi ghi kết luận; người báo cáo nhận kết quả “đã được xử lý”.",
+    "confirm": "Xác nhận xử lý",
+    "noteLabel": "Lý do / kết luận",
+    "actionLegend": "Hành động",
+    "applyToSameTarget_other": "Đóng luôn {{count}} báo cáo khác cùng đối tượng",
+    "success": "Đã xử lý báo cáo",
+    "successMany_other": "Đã xử lý {{count}} báo cáo",
+    "choice": {
+      "NONE": "Không thực hiện thêm",
+      "DELETE_MESSAGE": "Xóa tin nhắn",
+      "TIMEOUT": "Timeout trong chat",
+      "BAN": "Cấm chat trong kênh",
+      "LOCK_USER": "Khóa tài khoản",
+      "SUSPEND_CHANNEL": "Tạm ngưng kênh",
+      "TAKEDOWN_STREAM": "Gỡ buổi phát"
+    },
+    "choiceHint": {
+      "NONE": "Chỉ đóng báo cáo là có vi phạm.",
+      "DELETE_MESSAGE": "Tin bị ẩn với mọi người trong phòng chat.",
+      "TIMEOUT": "Người này không gửi được tin trong kênh một thời gian.",
+      "BAN": "Người này không chat được trong kênh cho tới khi bỏ cấm.",
+      "LOCK_USER": "Đăng xuất khỏi mọi thiết bị, ngắt khỏi chat.",
+      "SUSPEND_CHANNEL": "Kết thúc buổi phát, chat chỉ đọc, ẩn kênh; không thời hạn.",
+      "TAKEDOWN_STREAM": "Kết thúc buổi phát và xóa bản xem lại."
+    }
+  },
+  "dismiss": {
+    "action": "Bỏ qua",
+    "title": "Bỏ qua báo cáo?",
+    "body": "Người báo cáo sẽ nhận kết quả “không phát hiện vi phạm”.",
+    "confirm": "Bỏ qua",
+    "success": "Đã bỏ qua báo cáo",
+    "successMany_other": "Đã bỏ qua {{count}} báo cáo"
+  },
+  "errors": {
+    "alreadyClosed": "Báo cáo đã được xử lý",
+    "actionAppliedNotClosed": "Hành động đã được áp dụng nhưng chưa đóng được báo cáo: {{error}}"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Audit log",
+  "subtitle": "Append-only: rows can never be edited or deleted. Newest first, refreshes every 30 seconds.",
+  "system": "System",
+  "filter": {
+    "label": "Filter the log",
+    "action": "Action",
+    "resourceType": "Target type",
+    "resourceId": "Target ID",
+    "actor": "Actor",
+    "actorPlaceholder": "@username or ID",
+    "from": "From",
+    "to": "To",
+    "all": "All",
+    "apply": "Filter",
+    "clear": "Clear filters",
+    "resourceIdInvalid": "The target ID must be a UUID.",
+    "rangeInvalid": "The start date must be on or before the end date.",
+    "actorNotFound": "No such actor."
+  },
+  "table": {
+    "caption": "Audit log, newest first. Press Enter or click a row for details.",
+    "createdAt": "Time",
+    "actor": "Actor",
+    "role": "Role",
+    "action": "Action",
+    "resource": "Target",
+    "reason": "Reason",
+    "source": "Source",
+    "rowLabel": "{{action}} by {{actor}}",
+    "empty": "No matching entries.",
+    "loadError": "Could not load the audit log.",
+    "end": "All shown."
+  },
+  "detail": {
+    "resourceId": "Target ID",
+    "actorId": "Actor ID"
+  },
+  "history": {
+    "empty": "No entries yet.",
+    "viewAll": "See everything in the audit log"
+  },
+  "role": {
+    "OWNER": "Channel owner",
+    "MODERATOR": "Moderator",
+    "ADMIN": "Administrator",
+    "USER": "User",
+    "SYSTEM": "System"
+  },
+  "resourceType": {
+    "USER": "User",
+    "CHANNEL": "Channel",
+    "STREAM": "Stream",
+    "MESSAGE": "Message",
+    "REPORT": "Report",
+    "CREATOR_APPLICATION": "Creator application"
+  },
+  "action": {
+    "CHAT_DELETE": "Message deleted",
+    "CHAT_TIMEOUT": "Timeout",
+    "CHAT_UNTIMEOUT": "Timeout removed",
+    "CHAT_BAN": "Chat ban",
+    "CHAT_UNBAN": "Unban",
+    "CHAT_PIN": "Message pinned",
+    "CHAT_UNPIN": "Message unpinned",
+    "CHAT_SETTINGS_CHANGED": "Chat modes changed",
+    "BLOCKED_TERM_ADDED": "Blocked term added",
+    "BLOCKED_TERM_REMOVED": "Blocked term removed",
+    "CHANNEL_ROLE_GRANTED": "Role granted",
+    "CHANNEL_ROLE_REVOKED": "Role revoked",
+    "USER_LOCKED": "Account locked",
+    "USER_UNLOCKED": "Account unlocked",
+    "CHANNEL_SUSPENDED": "Channel suspended",
+    "CHANNEL_RESTORED": "Channel restored",
+    "STREAM_TAKEDOWN": "Stream taken down",
+    "REPORT_CLAIMED": "Report claimed",
+    "REPORT_RESOLVED": "Report resolved",
+    "REPORT_DISMISSED": "Report dismissed",
+    "CREATOR_APPROVED": "Creator application approved",
+    "CREATOR_REJECTED": "Creator application rejected",
+    "PASSWORD_CHANGED": "Password changed",
+    "PASSWORD_RESET": "Password reset",
+    "ACCOUNT_TEMP_LOCKED": "Temporary lock after failed sign-ins",
+    "REFRESH_REUSE": "Refresh token reused",
+    "ADMIN_PROMOTED": "Promoted to administrator"
+  }
+}

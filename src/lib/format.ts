@@ -30,3 +30,25 @@ export function ageOn(birthDate: string | null, today = new Date()): number | nu
 
   return age < 0 ? null : age
 }
+
+/** Clock time with seconds ("20:14:05"), for chat evidence. */
+export function formatClock(iso: string | null, locale = currentLocale()): string {
+  if (!iso) return ''
+
+  return new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }).format(new Date(iso))
+}
+
+/** Elapsed time as "1:12:30" (or "4:05" under an hour); negative or unknown spans read "0:00". */
+export function formatElapsed(totalSeconds: number): string {
+  const s = Number.isFinite(totalSeconds) ? Math.max(0, Math.floor(totalSeconds)) : 0
+  const h = Math.floor(s / 3600)
+  const m = Math.floor((s % 3600) / 60)
+  const sec = String(s % 60).padStart(2, '0')
+
+  return h > 0 ? `${h}:${String(m).padStart(2, '0')}:${sec}` : `${m}:${sec}`
+}
+
+/** Whole number with the locale's grouping ("12.480" in Vietnamese). */
+export function formatCount(value: number, locale = currentLocale()): string {
+  return new Intl.NumberFormat(locale).format(value)
+}

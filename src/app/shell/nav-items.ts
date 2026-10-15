@@ -6,15 +6,15 @@ export type NavItem = {
   /** common:nav.* key */
   label: 'nav.creatorApplications' | 'nav.reports' | 'nav.users' | 'nav.channels' | 'nav.streams' | 'nav.auditLog'
   icon: LucideIcon
-  /** Planned for GĐ5; shown disabled so admins see what is coming. */
-  disabled?: boolean
+  /** Shows the number of OPEN reports beside the label (polled every 30 s). */
+  openReportsBadge?: boolean
 }
 
 export const NAV_ITEMS: NavItem[] = [
   { to: '/creator-applications', label: 'nav.creatorApplications', icon: FileCheck2Icon },
-  { to: '/reports', label: 'nav.reports', icon: FlagIcon, disabled: true },
-  { to: '/users', label: 'nav.users', icon: UsersIcon, disabled: true },
-  { to: '/channels', label: 'nav.channels', icon: TvIcon, disabled: true },
-  { to: '/streams', label: 'nav.streams', icon: RadioTowerIcon, disabled: true },
-  { to: '/audit-log', label: 'nav.auditLog', icon: ScrollTextIcon, disabled: true },
+  { to: '/reports', label: 'nav.reports', icon: FlagIcon, openReportsBadge: true },
+  { to: '/users', label: 'nav.users', icon: UsersIcon },
+  { to: '/channels', label: 'nav.channels', icon: TvIcon },
+  { to: '/streams', label: 'nav.streams', icon: RadioTowerIcon },
+  { to: '/audit-log', label: 'nav.auditLog', icon: ScrollTextIcon },
 ]

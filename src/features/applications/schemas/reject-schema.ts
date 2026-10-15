@@ -1,13 +1,12 @@
 import { z } from 'zod'
+import { codePointLength } from '@/lib/text'
 
 // BR-D13: a rejection needs a reason of 10–500 characters, shown to the applicant.
 export const REASON_MIN = 10
 export const REASON_MAX = 500
 
 /** Characters as identity counts them (Unicode code points of the trimmed text, like Go's utf8.RuneCountInString). */
-export function reasonLength(value: string): number {
-  return [...value.trim()].length
-}
+export const reasonLength = codePointLength
 
 // Messages are i18n keys; the dialog translates them (see useMessage).
 export const rejectSchema = z.object({

@@ -1,0 +1,81 @@
+{
+  "title": "Users",
+  "subtitle": "Look up by @username or ID, lock / unlock accounts. Refreshes every 30 seconds.",
+  "search": {
+    "label": "Find a user",
+    "placeholder": "Enter a @username or user ID",
+    "submit": "Search"
+  },
+  "filter": {
+    "label": "Filter users",
+    "status": "Status",
+    "all": "All"
+  },
+  "status": {
+    "ACTIVE": "Active",
+    "LOCKED": "Locked",
+    "DELETED": "Deleted",
+    "lockedUntil": "Locked until {{time}}",
+    "lockedForever": "Locked permanently"
+  },
+  "globalRole": {
+    "USER": "User",
+    "ADMIN": "Administrator"
+  },
+  "role": {
+    "ADMIN": "Administrator",
+    "CREATOR": "Creator",
+    "VIEWER": "Viewer"
+  },
+  "lockKind": {
+    "FAILED_LOGIN": "Temporary lock after failed sign-ins",
+    "ADMIN": "Locked by an administrator"
+  },
+  "table": {
+    "caption": "Users by name. Use the arrow keys to move and Enter to open the details.",
+    "user": "User",
+    "role": "Role",
+    "status": "Status",
+    "openReports": "Open reports",
+    "rowLabel": "@{{username}}",
+    "notFound": "No user found",
+    "empty": "No users yet.",
+    "loadError": "Could not load the users.",
+    "end": "All shown."
+  },
+  "detail": {
+    "label": "User details",
+    "placeholder": "Pick a user in the list to see their details.",
+    "notFound": "This user was not found.",
+    "loadError": "Could not load the user.",
+    "account": "Account",
+    "email": "Email",
+    "verified": "Verified",
+    "unverified": "Not verified",
+    "role": "Role",
+    "createdAt": "Created",
+    "lockedUntil": "Locked until",
+    "lockKind": "Lock type",
+    "lockReason": "Lock reason",
+    "channel": "Channel",
+    "openChannel": "View channel",
+    "history": "History",
+    "cannotLockAdmin": "Administrator accounts cannot be locked.",
+    "cannotLockSelf": "You cannot lock yourself."
+  },
+  "lock": {
+    "action": "Lock account",
+    "change": "Change lock duration",
+    "title": "Lock the account @{{username}}?",
+    "body": "They are signed out of every device and disconnected from chat right away.",
+    "confirm": "Lock account",
+    "success": "Locked @{{username}}"
+  },
+  "unlock": {
+    "action": "Unlock",
+    "title": "Unlock the account @{{username}}?",
+    "body": "They can sign in again right away.",
+    "confirm": "Unlock",
+    "success": "Unlocked @{{username}}"
+  }
+}

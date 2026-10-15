@@ -1,0 +1,81 @@
+{
+  "title": "Người dùng",
+  "subtitle": "Tra cứu theo @username hoặc ID, khóa / mở khóa tài khoản. Tự làm mới mỗi 30 giây.",
+  "search": {
+    "label": "Tìm người dùng",
+    "placeholder": "Nhập @username hoặc ID người dùng",
+    "submit": "Tìm"
+  },
+  "filter": {
+    "label": "Lọc người dùng",
+    "status": "Trạng thái",
+    "all": "Tất cả"
+  },
+  "status": {
+    "ACTIVE": "Hoạt động",
+    "LOCKED": "Đã khóa",
+    "DELETED": "Đã xóa",
+    "lockedUntil": "Đã khóa tới {{time}}",
+    "lockedForever": "Khóa vĩnh viễn"
+  },
+  "globalRole": {
+    "USER": "Người dùng",
+    "ADMIN": "Quản trị viên"
+  },
+  "role": {
+    "ADMIN": "Quản trị viên",
+    "CREATOR": "Creator",
+    "VIEWER": "Người xem"
+  },
+  "lockKind": {
+    "FAILED_LOGIN": "Khóa tạm do đăng nhập sai",
+    "ADMIN": "Khóa bởi quản trị viên"
+  },
+  "table": {
+    "caption": "Người dùng theo tên. Dùng phím mũi tên để di chuyển, Enter để mở chi tiết.",
+    "user": "Người dùng",
+    "role": "Vai trò",
+    "status": "Trạng thái",
+    "openReports": "Báo cáo mở",
+    "rowLabel": "@{{username}}",
+    "notFound": "Không tìm thấy người dùng",
+    "empty": "Chưa có người dùng nào.",
+    "loadError": "Không tải được danh sách người dùng.",
+    "end": "Đã hiện tất cả."
+  },
+  "detail": {
+    "label": "Chi tiết người dùng",
+    "placeholder": "Chọn một người dùng trong danh sách để xem chi tiết.",
+    "notFound": "Không tìm thấy người dùng này.",
+    "loadError": "Không tải được thông tin người dùng.",
+    "account": "Tài khoản",
+    "email": "Email",
+    "verified": "Đã xác minh",
+    "unverified": "Chưa xác minh",
+    "role": "Vai trò",
+    "createdAt": "Ngày tạo",
+    "lockedUntil": "Khóa tới",
+    "lockKind": "Kiểu khóa",
+    "lockReason": "Lý do khóa",
+    "channel": "Kênh",
+    "openChannel": "Xem kênh",
+    "history": "Lịch sử",
+    "cannotLockAdmin": "Không thể khóa tài khoản quản trị viên.",
+    "cannotLockSelf": "Bạn không thể khóa chính mình."
+  },
+  "lock": {
+    "action": "Khóa tài khoản",
+    "change": "Đổi thời hạn khóa",
+    "title": "Khóa tài khoản @{{username}}?",
+    "body": "Người này bị đăng xuất khỏi mọi thiết bị và bị ngắt khỏi chat ngay.",
+    "confirm": "Khóa tài khoản",
+    "success": "Đã khóa tài khoản @{{username}}"
+  },
+  "unlock": {
+    "action": "Mở khóa",
+    "title": "Mở khóa tài khoản @{{username}}?",
+    "body": "Người này đăng nhập lại được ngay.",
+    "confirm": "Mở khóa",
+    "success": "Đã mở khóa tài khoản @{{username}}"
+  }
+}

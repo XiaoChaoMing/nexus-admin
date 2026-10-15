@@ -1,0 +1,87 @@
+{
+  "title": "Nhật ký hệ thống",
+  "subtitle": "Chỉ ghi thêm, không sửa hay xóa được. Mới nhất trước, tự làm mới mỗi 30 giây.",
+  "system": "Hệ thống",
+  "filter": {
+    "label": "Lọc nhật ký",
+    "action": "Hành động",
+    "resourceType": "Loại đối tượng",
+    "resourceId": "ID đối tượng",
+    "actor": "Người thực hiện",
+    "actorPlaceholder": "@username hoặc ID",
+    "from": "Từ ngày",
+    "to": "Đến ngày",
+    "all": "Tất cả",
+    "apply": "Lọc",
+    "clear": "Xóa bộ lọc",
+    "resourceIdInvalid": "ID đối tượng phải là UUID.",
+    "rangeInvalid": "Ngày bắt đầu phải trước hoặc bằng ngày kết thúc.",
+    "actorNotFound": "Không tìm thấy người thực hiện này."
+  },
+  "table": {
+    "caption": "Nhật ký, mới nhất trước. Enter hoặc bấm một dòng để xem chi tiết.",
+    "createdAt": "Thời điểm",
+    "actor": "Người thực hiện",
+    "role": "Vai trò",
+    "action": "Hành động",
+    "resource": "Đối tượng",
+    "reason": "Lý do",
+    "source": "Nguồn",
+    "rowLabel": "{{action}} bởi {{actor}}",
+    "empty": "Không có bản ghi phù hợp.",
+    "loadError": "Không tải được nhật ký.",
+    "end": "Đã hiện tất cả."
+  },
+  "detail": {
+    "resourceId": "ID đối tượng",
+    "actorId": "ID người thực hiện"
+  },
+  "history": {
+    "empty": "Chưa có bản ghi nào.",
+    "viewAll": "Xem toàn bộ trong Nhật ký"
+  },
+  "role": {
+    "OWNER": "Chủ kênh",
+    "MODERATOR": "Moderator",
+    "ADMIN": "Quản trị viên",
+    "USER": "Người dùng",
+    "SYSTEM": "Hệ thống"
+  },
+  "resourceType": {
+    "USER": "Người dùng",
+    "CHANNEL": "Kênh",
+    "STREAM": "Buổi phát",
+    "MESSAGE": "Tin nhắn",
+    "REPORT": "Báo cáo",
+    "CREATOR_APPLICATION": "Đơn Creator"
+  },
+  "action": {
+    "CHAT_DELETE": "Xóa tin",
+    "CHAT_TIMEOUT": "Timeout",
+    "CHAT_UNTIMEOUT": "Gỡ timeout",
+    "CHAT_BAN": "Cấm chat",
+    "CHAT_UNBAN": "Bỏ cấm",
+    "CHAT_PIN": "Ghim tin",
+    "CHAT_UNPIN": "Bỏ ghim",
+    "CHAT_SETTINGS_CHANGED": "Đổi chế độ chat",
+    "BLOCKED_TERM_ADDED": "Thêm từ khóa chặn",
+    "BLOCKED_TERM_REMOVED": "Xóa từ khóa chặn",
+    "CHANNEL_ROLE_GRANTED": "Gán vai trò",
+    "CHANNEL_ROLE_REVOKED": "Gỡ vai trò",
+    "USER_LOCKED": "Khóa tài khoản",
+    "USER_UNLOCKED": "Mở khóa tài khoản",
+    "CHANNEL_SUSPENDED": "Tạm ngưng kênh",
+    "CHANNEL_RESTORED": "Mở lại kênh",
+    "STREAM_TAKEDOWN": "Gỡ buổi phát",
+    "REPORT_CLAIMED": "Nhận xử lý báo cáo",
+    "REPORT_RESOLVED": "Xử lý báo cáo",
+    "REPORT_DISMISSED": "Bỏ qua báo cáo",
+    "CREATOR_APPROVED": "Duyệt đơn Creator",
+    "CREATOR_REJECTED": "Từ chối đơn Creator",
+    "PASSWORD_CHANGED": "Đổi mật khẩu",
+    "PASSWORD_RESET": "Đặt lại mật khẩu",
+    "ACCOUNT_TEMP_LOCKED": "Khóa tạm do đăng nhập sai",
+    "REFRESH_REUSE": "Dùng lại refresh token",
+    "ADMIN_PROMOTED": "Nâng quyền quản trị"
+  }
+}

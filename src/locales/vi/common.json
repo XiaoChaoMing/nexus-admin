@@ -9,10 +9,9 @@
     "reports": "Báo cáo",
     "users": "Người dùng",
     "channels": "Kênh",
-    "streams": "Stream",
+    "streams": "Buổi phát",
     "auditLog": "Nhật ký",
-    "comingSoon": "Có ở GĐ5",
-    "phase5": "GĐ5"
+    "openReports_other": "{{count}} báo cáo mới"
   },
   "topBar": {
     "signedInAs": "Đang đăng nhập: {{name}}",
@@ -57,5 +56,44 @@
     "code": "404",
     "title": "Không tìm thấy trang",
     "body": "Đường dẫn này không tồn tại trong trang quản trị."
+  },
+  "detail": {
+    "close": "Đóng chi tiết"
+  },
+  "table": {
+    "loadMore": "Tải thêm"
+  },
+  "applying": "Đang áp dụng…",
+  "reason": {
+    "label": "Lý do",
+    "hint": "Từ 10 đến 500 ký tự.",
+    "counter": "{{length}}/{{max}}",
+    "tooShort": "Lý do cần ít nhất 10 ký tự.",
+    "tooLong": "Lý do tối đa 500 ký tự.",
+    "length": "Lý do phải từ 10 đến 500 ký tự."
+  },
+  "adminErrors": {
+    "self": "Bạn không thể thực hiện thao tác này với chính mình.",
+    "adminTarget": "Không thể khóa tài khoản quản trị viên.",
+    "protected": "Không thể hạn chế chủ kênh trong chat của kênh đó.",
+    "notFound": "Đối tượng không còn tồn tại.",
+    "alreadyBanned": "Người này đang bị cấm chat trong kênh.",
+    "reportGone": "Báo cáo không còn tồn tại."
+  },
+  "duration": {
+    "lockLegend": "Thời hạn khóa",
+    "lock": {
+      "24": "24 giờ",
+      "168": "7 ngày",
+      "720": "30 ngày",
+      "forever": "Vĩnh viễn"
+    },
+    "timeoutLegend": "Thời gian timeout",
+    "timeout": {
+      "60": "1 phút",
+      "600": "10 phút",
+      "3600": "1 giờ",
+      "86400": "1 ngày"
+    }
   }
 }

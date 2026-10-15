@@ -95,3 +95,18 @@ describe('describeError', () => {
     expect(describeError(new Error('boom'))).toEqual({ key: 'common:errors.fallback' })
   })
 })
+
+describe('apiRequest body of 202', () => {
+  it('returns {actionId} from a 202 and undefined from a 204', async () => {
+    const { apiRequest } = await import('@/lib/api-client')
+    const original = globalThis.fetch
+    try {
+      globalThis.fetch = (async () => json(202, { data: { actionId: 'a1' } })) as typeof fetch
+      expect(await apiRequest('/v1/admin/users/u/lock', { method: 'POST', body: {} })).toEqual({ actionId: 'a1' })
+      globalThis.fetch = (async () => new Response(null, { status: 204 })) as typeof fetch
+      expect(await apiRequest('/v1/x', { method: 'DELETE' })).toBeUndefined()
+    } finally {
+      globalThis.fetch = original
+    }
+  })
+})

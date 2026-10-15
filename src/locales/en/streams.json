@@ -1,0 +1,33 @@
+{
+  "title": "Live streams",
+  "subtitle": "Refreshes every 30 seconds.",
+  "status": {
+    "LIVE": "Live",
+    "INTERRUPTED": "Signal lost"
+  },
+  "table": {
+    "caption": "Live streams, most viewers first.",
+    "stream": "Stream",
+    "channel": "Channel",
+    "category": "Category",
+    "viewers": "Viewers",
+    "elapsed": "Live for",
+    "actions": "Actions",
+    "watch": "Watch",
+    "watchLabel": "Watch “{{title}}” on the web",
+    "empty": "No streams are live.",
+    "loadError": "Could not load the streams."
+  },
+  "takedown": {
+    "action": "Take down",
+    "actionLabel": "Take down “{{title}}”",
+    "title": "Take down “{{title}}”?",
+    "body": "The broadcast ends right away and its replay is deleted for good. The channel is not suspended. This cannot be undone.",
+    "confirm": "Take down",
+    "success": "Stream taken down",
+    "pending": "Taking down…"
+  },
+  "errors": {
+    "cannotTakedown": "The stream has ended or cannot be taken down."
+  }
+}

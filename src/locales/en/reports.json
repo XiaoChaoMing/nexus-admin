@@ -1,0 +1,155 @@
+{
+  "title": "Reports",
+  "subtitle": "Oldest reports first. The list refreshes every 30 seconds.",
+  "tab": {
+    "TODO": "To do",
+    "RESOLVED": "Resolved",
+    "DISMISSED": "Dismissed",
+    "ALL": "All"
+  },
+  "status": {
+    "OPEN": "New",
+    "IN_REVIEW": "In review",
+    "RESOLVED": "Resolved",
+    "DISMISSED": "Dismissed"
+  },
+  "targetType": {
+    "MESSAGE": "Message",
+    "USER": "User",
+    "STREAM": "Stream",
+    "CHANNEL": "Channel"
+  },
+  "reason": {
+    "SPAM": "Spam",
+    "HARASSMENT": "Harassment",
+    "VIOLENCE": "Violence",
+    "SENSITIVE": "Sensitive content",
+    "COPYRIGHT": "Copyright",
+    "OTHER": "Other"
+  },
+  "filter": {
+    "label": "Filter reports",
+    "statusLabel": "Filter by status",
+    "targetType": "Target",
+    "reason": "Reason",
+    "all": "All",
+    "clear": "Clear filters"
+  },
+  "table": {
+    "caption": "Reports, oldest first. Use the arrow keys to move and Enter to open the details.",
+    "target": "Target",
+    "reason": "Reason",
+    "reporter": "Reporter",
+    "sameTarget": "Same target",
+    "status": "Status",
+    "assignee": "Assignee",
+    "createdAt": "Time",
+    "rowLabel": "Report about {{target}}, {{status}}",
+    "emptyTodo": "No reports left to handle.",
+    "emptyFiltered": "No reports match these filters.",
+    "empty": "No reports.",
+    "loadError": "Could not load the reports.",
+    "end": "All shown."
+  },
+  "detail": {
+    "label": "Report details",
+    "placeholder": "Pick a report in the list to see its details.",
+    "notFound": "This report was not found.",
+    "loadError": "Could not load the report.",
+    "reportedAt": "Reported at {{time}}",
+    "report": "Report",
+    "reason": "Reason",
+    "note": "Note",
+    "noNote": "No note",
+    "reporter": "Reporter",
+    "target": "Target",
+    "targetType": "Type",
+    "targetLabel": "Content",
+    "evidence": "Evidence",
+    "history": "History of the target",
+    "related_one": "Other report on the same target ({{count}})",
+    "related_other": "Other reports on the same target ({{count}})"
+  },
+  "target": {
+    "openWatch": "Open watch page",
+    "openProfile": "Open profile",
+    "viewUser": "View user",
+    "viewOwner": "View owner"
+  },
+  "evidence": {
+    "notForTarget": "Stream and channel reports carry no chat messages.",
+    "unavailableTitle": "Messages unavailable",
+    "unavailableBody": "The chat service did not answer when the report was filed.",
+    "none": "No messages attached.",
+    "listLabel_one": "{{count}} message as evidence",
+    "listLabel_other": "{{count}} messages as evidence",
+    "reported": "Reported message",
+    "deleted": "Deleted"
+  },
+  "history": {
+    "empty": "No actions yet.",
+    "by": "by @{{username}}",
+    "lockFor": "Locked for {{duration}}",
+    "lockUntil": "Locked until {{time}}",
+    "type": {
+      "LOCK_USER": "Account locked",
+      "UNLOCK_USER": "Account unlocked",
+      "SUSPEND_CHANNEL": "Channel suspended",
+      "RESTORE_CHANNEL": "Channel restored",
+      "TAKEDOWN_STREAM": "Stream taken down"
+    }
+  },
+  "claim": {
+    "action": "Claim",
+    "reclaim": "Claim instead",
+    "mine": "You are handling this",
+    "byOther": "Being handled by @{{username}}",
+    "success": "Report claimed",
+    "resolvedBy": "Resolved by @{{username}} at {{time}}",
+    "dismissedBy": "Dismissed by @{{username}} at {{time}}"
+  },
+  "resolve": {
+    "action": "Resolve",
+    "title": "Resolve report",
+    "body": "Target: {{target}}. Pick an action, then write the conclusion; the reporter is told it was handled.",
+    "confirm": "Confirm",
+    "noteLabel": "Reason / conclusion",
+    "actionLegend": "Action",
+    "applyToSameTarget_one": "Also close {{count}} other report on the same target",
+    "applyToSameTarget_other": "Also close {{count}} other reports on the same target",
+    "success": "Report resolved",
+    "successMany_one": "{{count}} report resolved",
+    "successMany_other": "{{count}} reports resolved",
+    "choice": {
+      "NONE": "No further action",
+      "DELETE_MESSAGE": "Delete the message",
+      "TIMEOUT": "Time out in chat",
+      "BAN": "Ban from the channel chat",
+      "LOCK_USER": "Lock the account",
+      "SUSPEND_CHANNEL": "Suspend the channel",
+      "TAKEDOWN_STREAM": "Take the stream down"
+    },
+    "choiceHint": {
+      "NONE": "Only close the report as a violation.",
+      "DELETE_MESSAGE": "The message is hidden from everyone in the room.",
+      "TIMEOUT": "They cannot send messages in this channel for a while.",
+      "BAN": "They cannot chat in this channel until unbanned.",
+      "LOCK_USER": "Signed out everywhere and disconnected from chat.",
+      "SUSPEND_CHANNEL": "Ends the broadcast, chat read-only, channel hidden; no end date.",
+      "TAKEDOWN_STREAM": "Ends the broadcast and deletes the replay."
+    }
+  },
+  "dismiss": {
+    "action": "Dismiss",
+    "title": "Dismiss report?",
+    "body": "The reporter will be told that no violation was found.",
+    "confirm": "Dismiss",
+    "success": "Report dismissed",
+    "successMany_one": "{{count}} report dismissed",
+    "successMany_other": "{{count}} reports dismissed"
+  },
+  "errors": {
+    "alreadyClosed": "The report has already been handled",
+    "actionAppliedNotClosed": "The action was applied but the report could not be closed: {{error}}"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Kênh",
+  "subtitle": "Tra cứu theo @handle, tên kênh hoặc ID; tạm ngưng / mở lại kênh. Tự làm mới mỗi 30 giây.",
+  "search": {
+    "label": "Tìm kênh",
+    "placeholder": "Nhập @handle, tên kênh hoặc ID",
+    "submit": "Tìm"
+  },
+  "filter": {
+    "label": "Lọc kênh",
+    "status": "Trạng thái",
+    "all": "Tất cả"
+  },
+  "status": {
+    "ACTIVE": "Hoạt động",
+    "SUSPENDED": "Tạm ngưng"
+  },
+  "table": {
+    "caption": "Kênh theo handle. Dùng phím mũi tên để di chuyển, Enter để mở chi tiết.",
+    "channel": "Kênh",
+    "owner": "Chủ kênh",
+    "status": "Trạng thái",
+    "openReports": "Báo cáo mở",
+    "rowLabel": "{{name}} (@{{handle}})",
+    "notFound": "Không tìm thấy kênh",
+    "empty": "Chưa có kênh nào.",
+    "loadError": "Không tải được danh sách kênh.",
+    "end": "Đã hiện tất cả."
+  },
+  "detail": {
+    "label": "Chi tiết kênh",
+    "placeholder": "Chọn một kênh trong danh sách để xem chi tiết.",
+    "notFound": "Không tìm thấy kênh này.",
+    "loadError": "Không tải được thông tin kênh.",
+    "live": "Đang live",
+    "channel": "Kênh",
+    "owner": "Chủ kênh",
+    "openReports": "Báo cáo mở",
+    "suspendedAt": "Tạm ngưng lúc",
+    "currentStream": "Buổi phát hiện tại",
+    "watch": "Mở trang xem",
+    "openProfile": "Mở hồ sơ kênh",
+    "history": "Lịch sử"
+  },
+  "suspend": {
+    "action": "Tạm ngưng kênh",
+    "title": "Tạm ngưng kênh {{name}}?",
+    "body": "Buổi phát đang chạy (nếu có) kết thúc ngay, chat chuyển chỉ đọc, kênh ẩn khỏi Khám phá và Tìm kiếm, lịch phát sắp tới bị hủy. Tạm ngưng không có thời hạn.",
+    "confirm": "Tạm ngưng kênh",
+    "success": "Đã tạm ngưng kênh {{name}}"
+  },
+  "restore": {
+    "action": "Mở lại kênh",
+    "title": "Mở lại kênh {{name}}?",
+    "body": "Kênh hiện lại ở Khám phá và Tìm kiếm; Creator phát trực tiếp lại được.",
+    "confirm": "Mở lại kênh",
+    "success": "Đã mở lại kênh {{name}}"
+  }
+}

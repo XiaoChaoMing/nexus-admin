@@ -1,0 +1,33 @@
+{
+  "title": "Buổi phát đang live",
+  "subtitle": "Tự làm mới mỗi 30 giây.",
+  "status": {
+    "LIVE": "Live",
+    "INTERRUPTED": "Mất tín hiệu"
+  },
+  "table": {
+    "caption": "Buổi phát đang live, nhiều người xem trước.",
+    "stream": "Buổi phát",
+    "channel": "Kênh",
+    "category": "Danh mục",
+    "viewers": "Người xem",
+    "elapsed": "Đã phát",
+    "actions": "Thao tác",
+    "watch": "Xem",
+    "watchLabel": "Xem “{{title}}” trên web",
+    "empty": "Không có buổi phát nào đang live.",
+    "loadError": "Không tải được danh sách buổi phát."
+  },
+  "takedown": {
+    "action": "Gỡ",
+    "actionLabel": "Gỡ buổi phát “{{title}}”",
+    "title": "Gỡ buổi phát “{{title}}”?",
+    "body": "Buổi phát kết thúc ngay và bản xem lại bị xóa vĩnh viễn. Kênh không bị khóa. Không thể hoàn tác.",
+    "confirm": "Gỡ buổi phát",
+    "success": "Đã gỡ buổi phát",
+    "pending": "Đang gỡ…"
+  },
+  "errors": {
+    "cannotTakedown": "Buổi phát đã kết thúc hoặc không thể gỡ."
+  }
+}

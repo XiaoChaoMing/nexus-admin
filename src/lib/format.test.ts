@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import i18n from '@/i18n'
-import { ageOn, formatCalendarDate } from '@/lib/format'
+import { ageOn, formatCalendarDate, formatClock, formatCount, formatElapsed } from '@/lib/format'
 
 describe('ageOn', () => {
   const today = new Date(2026, 9, 13) // 13 Oct 2026, local time
@@ -40,5 +40,22 @@ describe('age label', () => {
     expect(i18n.t('applications:age', { count: 1 })).toBe('1 year old')
     expect(i18n.t('applications:age', { count: 21 })).toBe('21 years old')
     await i18n.changeLanguage('vi')
+  })
+})
+
+describe('formatElapsed', () => {
+  it('shows h:mm:ss over an hour and m:ss under', () => {
+    expect(formatElapsed(4350)).toBe('1:12:30')
+    expect(formatElapsed(245)).toBe('4:05')
+    expect(formatElapsed(-3)).toBe('0:00')
+    expect(formatElapsed(Number.NaN)).toBe('0:00')
+  })
+})
+
+describe('formatClock and formatCount', () => {
+  it('formats in the given locale', () => {
+    expect(formatClock('2026-10-15T13:14:05Z', 'en-GB')).toMatch(/^\d{2}:14:05$/)
+    expect(formatClock(null)).toBe('')
+    expect(formatCount(12480, 'vi-VN')).toBe('12.480')
   })
 })
