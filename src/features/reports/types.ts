@@ -36,14 +36,27 @@ export type EvidenceStatus = 'CAPTURED' | 'NONE' | 'UNAVAILABLE'
 export type EvidenceItem = {
   messageId: string
   userId: string
+  /** From safety-svc's user copy; null when the copy does not have the author. */
+  username: string | null
+  displayName: string | null
   body: string
   fragments: unknown[]
   createdAt: string
   deleted: boolean
 }
 
-export type AdminActionType = 'LOCK_USER' | 'UNLOCK_USER' | 'SUSPEND_CHANNEL' | 'RESTORE_CHANNEL' | 'TAKEDOWN_STREAM'
+export type AdminActionType =
+  | 'LOCK_USER'
+  | 'UNLOCK_USER'
+  | 'SUSPEND_CHANNEL'
+  | 'RESTORE_CHANNEL'
+  | 'TAKEDOWN_STREAM'
+  | 'CHAT_TIMEOUT'
+  | 'CHAT_UNTIMEOUT'
+  | 'CHAT_BAN'
+  | 'CHAT_UNBAN'
 
+/** An admin action, or a chat timeout / ban of the reported user (`CHAT_*`, from the audit log; `admin` is then the moderator). */
 export type AdminAction = {
   id: string
   type: AdminActionType
@@ -52,6 +65,9 @@ export type AdminAction = {
   reason: string
   expiresAt: string | null
   admin: PersonRef
+  actorRole: 'ADMIN' | 'OWNER' | 'MODERATOR'
+  /** Channel of a `CHAT_*` row; null for admin actions. */
+  channelId: string | null
   reportId: string | null
   createdAt: string
 }
@@ -60,6 +76,8 @@ export type AdminReportDetail = AdminReport & {
   note: string | null
   /** Room of a MESSAGE (or of the USER evidence). */
   streamId: string | null
+  /** The reported channel, or the channel of the reported stream / of the room; null when unknown. */
+  channelId: string | null
   evidence: EvidenceItem[]
   evidenceStatus: EvidenceStatus
   resolvedBy: PersonRef | null

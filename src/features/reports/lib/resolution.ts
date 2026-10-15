@@ -98,6 +98,7 @@ function required<T>(value: T | null, what: string): T {
 
 /** Channel the action applies to: the reported channel, or the channel of the reported stream / chat room. */
 async function channelOf(report: AdminReportDetail, api: ResolutionApi): Promise<string> {
+  if (report.channelId) return report.channelId
   if (report.targetType === 'CHANNEL') return report.target.id
   const streamId = report.targetType === 'STREAM' ? report.target.id : required(report.streamId, 'stream')
 

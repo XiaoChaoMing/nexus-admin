@@ -18,6 +18,7 @@ function report(overrides: Partial<AdminReportDetail> = {}): AdminReportDetail {
     createdAt: '2026-10-15T13:14:05Z',
     note: null,
     streamId: 's1',
+    channelId: null,
     evidence: [],
     evidenceStatus: 'CAPTURED',
     resolvedBy: null,
@@ -151,6 +152,12 @@ describe('resolveWithAction', () => {
       'suspend c1 r1',
       'suspend c9 r1',
     ])
+  })
+
+  it('uses the channel the server resolved without looking the stream up', async () => {
+    const api = fakeApi()
+    await resolveWithAction(report({ channelId: 'c5' }), { action: 'BAN' }, input, api)
+    expect(api.calls.filter((c) => !c.startsWith('resolve'))).toEqual(['ban c5 u-an'])
   })
 
   it('leaves the report open when the action fails, and says so when only the resolve fails', async () => {

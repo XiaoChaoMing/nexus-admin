@@ -89,12 +89,17 @@
     "by": "bởi @{{username}}",
     "lockFor": "Khóa {{duration}}",
     "lockUntil": "Khóa tới {{time}}",
+    "timeoutUntil": "Timeout chat tới {{time}}",
     "type": {
       "LOCK_USER": "Khóa tài khoản",
       "UNLOCK_USER": "Mở khóa tài khoản",
       "SUSPEND_CHANNEL": "Tạm ngưng kênh",
       "RESTORE_CHANNEL": "Mở lại kênh",
-      "TAKEDOWN_STREAM": "Gỡ buổi phát"
+      "TAKEDOWN_STREAM": "Gỡ buổi phát",
+      "CHAT_TIMEOUT": "Timeout chat",
+      "CHAT_UNTIMEOUT": "Gỡ timeout chat",
+      "CHAT_BAN": "Cấm chat",
+      "CHAT_UNBAN": "Gỡ cấm chat"
     }
   },
   "claim": {

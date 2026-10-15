@@ -18,8 +18,8 @@ const messageReport = (overrides: Partial<EvidenceReport> = {}): EvidenceReport 
   target: { id: 'm2', label: '@an: mua follow giá rẻ', link: '/live/s1', userId: 'u-an' },
   evidenceStatus: 'CAPTURED',
   evidence: [
-    { messageId: 'm1', userId: 'u-an', body: 'xin chào', fragments: [], createdAt: '2026-10-15T13:14:00Z', deleted: false },
-    { messageId: 'm2', userId: 'u-an', body: 'mua follow giá rẻ', fragments: [], createdAt: '2026-10-15T13:14:05Z', deleted: true },
+    { messageId: 'm1', userId: 'u-an', username: null, displayName: null, body: 'xin chào', fragments: [], createdAt: '2026-10-15T13:14:00Z', deleted: false },
+    { messageId: 'm2', userId: 'u-an', username: null, displayName: null, body: 'mua follow giá rẻ', fragments: [], createdAt: '2026-10-15T13:14:05Z', deleted: true },
   ],
   ...overrides,
 })
@@ -31,6 +31,13 @@ describe('EvidenceList', () => {
     expect(html.match(/<li/g)).toHaveLength(2)
     expect(html).toMatch(/data-reported="true"[^>]*>.*Tin bị báo cáo.*Đã xóa.*mua follow giá rẻ/s)
     expect(html).toContain('@an')
+  })
+
+  it('names other authors from the username the server sends', () => {
+    const other = { messageId: 'm0', userId: 'u-binh', username: 'binh', displayName: 'Bình', body: 'hi', fragments: [], createdAt: '2026-10-15T13:13:00Z', deleted: false }
+    const html = renderToStaticMarkup(<EvidenceList report={messageReport({ evidence: [other] })} />)
+    expect(html).toContain('@binh')
+    expect(html).not.toContain('#u-binh')
   })
 
   it('explains missing evidence', () => {

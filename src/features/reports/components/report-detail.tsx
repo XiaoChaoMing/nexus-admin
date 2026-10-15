@@ -20,11 +20,13 @@ function ActionLine({ action }: { action: AdminAction }) {
   const { t } = useTranslation(['reports', 'common'])
   const duration = action.type === 'LOCK_USER' ? lockDurationOf(action) : undefined
   const label =
-    duration === undefined
-      ? t(`history.type.${action.type}`)
-      : duration === 'OTHER'
-        ? t('history.lockUntil', { time: formatDateTime(action.expiresAt) })
-        : t('history.lockFor', { duration: t(`common:duration.lock.${duration ?? 'forever'}`) })
+    action.type === 'CHAT_TIMEOUT' && action.expiresAt
+      ? t('history.timeoutUntil', { time: formatDateTime(action.expiresAt) })
+      : duration === undefined
+        ? t(`history.type.${action.type}`)
+        : duration === 'OTHER'
+          ? t('history.lockUntil', { time: formatDateTime(action.expiresAt) })
+          : t('history.lockFor', { duration: t(`common:duration.lock.${duration ?? 'forever'}`) })
 
   return (
     <li className="text-body-md">

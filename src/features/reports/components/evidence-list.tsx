@@ -43,7 +43,7 @@ export function EvidenceList({ report }: EvidenceListProps) {
     <ol className="flex flex-col gap-1" data-testid="evidence-list" aria-label={t('evidence.listLabel', { count: report.evidence.length })}>
       {report.evidence.map((m) => {
         const reported = report.targetType === 'MESSAGE' && m.messageId === report.target.id
-        const name = m.userId === authorId && author ? author : `#${m.userId.slice(0, 8)}`
+        const name = m.username ? `@${m.username}` : m.userId === authorId && author ? author : `#${m.userId.slice(0, 8)}`
 
         return (
           <li

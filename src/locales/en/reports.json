@@ -91,12 +91,17 @@
     "by": "by @{{username}}",
     "lockFor": "Locked for {{duration}}",
     "lockUntil": "Locked until {{time}}",
+    "timeoutUntil": "Chat timeout until {{time}}",
     "type": {
       "LOCK_USER": "Account locked",
       "UNLOCK_USER": "Account unlocked",
       "SUSPEND_CHANNEL": "Channel suspended",
       "RESTORE_CHANNEL": "Channel restored",
-      "TAKEDOWN_STREAM": "Stream taken down"
+      "TAKEDOWN_STREAM": "Stream taken down",
+      "CHAT_TIMEOUT": "Chat timeout",
+      "CHAT_UNTIMEOUT": "Chat timeout lifted",
+      "CHAT_BAN": "Chat ban",
+      "CHAT_UNBAN": "Chat ban lifted"
     }
   },
   "claim": {
